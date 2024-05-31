@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmação de Reserva</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='confirmacao_reserva.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Confirmação de Reserva</h1>
+        <div class="details">
+            <h2>Detalhes da Reserva</h2>
+            <p><strong>ID da Reserva:</strong> {{ reserva.id }}</p>
+            <p><strong>Veículo:</strong> {{ reserva.veiculo.marca }} - {{ reserva.veiculo.modelo }}</p>
+            <p><strong>Data de Início:</strong> {{ reserva.data_inicio.strftime('%d/%m/%Y') }}</p>
+            <p><strong>Data de Fim:</strong> {{ reserva.data_fim.strftime('%d/%m/%Y') }}</p>
+            <p><strong>Forma de Pagamento:</strong> {{ reserva.forma_pagamento.tipo }}</p>
+            <p>Quantidade de Dias Selecionados: {{ dias_reserva }}</p>
+            <p><strong>Valor Total:</strong> R$ {{ reserva.valor_total }}</p>
+            
+        </div>
+        <a href="{{ url_for('perfil_cliente') }}" class="button">Voltar para o Perfil</a>
+    </div>
+</body>
+</html>

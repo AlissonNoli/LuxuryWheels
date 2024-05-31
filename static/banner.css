@@ -1,0 +1,136 @@
+/* Font importing */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Resetting CSS rules */
+.lw-reset {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: "Montserrat";
+}
+
+/* Root variables */
+:root {
+  --orange: #f78b00;
+  --blue: #00285f;
+  --gray: #ededed;
+  --preto: #000;
+}
+
+/* HTML and body */
+.lw-html,
+.lw-body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Header */
+.lw-header {
+  width: 100%;
+  height: 500px;
+  background: var(--orange);
+}
+
+/* Content */
+.lw-content {
+  max-width: 1000px;
+  min-width: 300px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+/* Navigation */
+.lw-nav {
+  width: 100%;
+  height: 125px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.lw-brand {
+  font-size: 24px;
+  color: var(--gray);
+  cursor: pointer;
+  font-weight: 900;
+}
+
+.lw-nav ul {
+  display: flex;
+  flex-direction: row;
+}
+
+.lw-nav ul li {
+  list-style: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.lw-nav ul li a {
+ 
+  text-decoration: none;
+}
+
+.lw-login {
+  background-color: var(--gray);
+  color: var(--orange);
+  border: 1px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 50px;
+  font-weight: bold;
+}
+
+.lw-login:hover {
+  color: var(--preto);
+}
+
+/* Header block */
+.lw-header-block {
+  max-width: 1000px;
+  min-width: 400px;
+  height: 350px;
+  background-color: var(--preto);
+  border-radius: 8px;
+  box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 10;
+  padding: 10px;
+}
+
+.lw-header-block img {
+  width: 50%;
+  position: absolute;
+  right: 1%;
+  bottom: 5%;
+  border-radius: 8px;
+}
+
+.lw-header-block .text {
+  position: absolute;
+  bottom: auto;
+  left: 5%;
+}
+
+.lw-header-block .text h2 {
+  color: var(--gray);
+  margin-bottom: 20px;
+  text-align: right;
+  transform: translateX(-20px);
+  transition: transform 0.5s;
+}
+
+.lw-header-block .text p {
+  max-width: 280px;
+  margin-top: 100px;
+  margin-left: 70px;
+  color: var(--gray);
+  text-align: center;
+  transform: translateX(-20px);
+  transition: transform 0.4s;
+}

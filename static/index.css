@@ -1,0 +1,631 @@
+/* Importação de fonte do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/* Resetando as regras CSS padrão */
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  outline: none;
+  font-family: "Montserrat"; /* Define a fonte padrão para o documento */
+}
+
+/* Define as variáveis de cores */
+:root {
+  --orange: #f78b00;
+  --blue: #00285f;
+  --gray: #ededed;
+  --preto: #000;
+}
+
+/* Estilos para o body e html */
+html,
+body {
+  width: 100%;
+  overflow-x: hidden; /* Esconde a barra de rolagem horizontal */
+}
+
+/* Estilos para o cabeçalho */
+header {
+  width: 100%;
+  height: 500px;
+  background: var(--orange); /* Define a cor de fundo */
+}
+
+/* Estilos para o conteúdo */
+.content {
+  max-width: 1000px; /* Define a largura máxima do conteúdo */
+  min-width: 300px; /* Define a largura mínima do conteúdo */
+  margin: 0 auto; /* Centraliza o conteúdo na página */
+  display: flex;
+  flex-direction: column;
+  padding: 10px; /* Adiciona espaçamento interno */
+}
+
+/* Estilos para a navegação */
+nav {
+  width: 100%;
+  height: 125px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Estilos para a marca da navegação */
+.brand {
+  font-size: 24px;
+  color: var(--gray);
+  cursor: pointer;
+  font-weight: 900;
+}
+
+/* Estilos para a lista de itens da navegação */
+nav ul {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Estilos para os itens da lista de navegação */
+nav ul li {
+  list-style: none;
+  padding: 10px;
+}
+
+/* Estilos para os links da lista de navegação */
+nav ul li a {
+  color: var(--gray);
+  text-decoration: none;
+}
+
+/* Estilos para o botão de login */
+.login {
+  background-color: var(--gray);
+  color: var(--blue);
+  border: 1px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 50px;
+  font-weight: bold;
+}
+
+/* Efeito hover para o botão de login */
+.login:hover {
+  color: var(--blue);
+  transition: 0.2s ease;
+}
+
+/* Estilos para o bloco do cabeçalho */
+.content .header-block {
+  max-width: 1000px;
+  min-width: 400px;
+  height: 350px;
+  background-color: var(--preto);
+  border-radius: 8px;
+  box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 10;
+  padding: 10px;
+}
+
+/* Estilos para a imagem do cabeçalho */
+.header-block img {
+  width: 50%;
+  position: absolute;
+  right: 1%;
+  bottom: 5%;
+  border-radius: 8px;
+}
+
+/* Estilos para o texto do cabeçalho */
+.header-block .text {
+  position: absolute;
+  bottom: auto;
+  left: 5%;
+}
+
+/* Estilos para o título do cabeçalho */
+.header-block .text h2 {
+  color: var(--gray);
+  margin-bottom: 20px;
+  text-align: right;
+  transform: translateX(-20px);
+  transition: transform 0.5s;
+}
+
+/* Estilos para o parágrafo do cabeçalho */
+.header-block .text p {
+  max-width: 280px;
+  margin-top: 100px;
+  margin-left: 70px;
+  color: var(--gray);
+  text-align: center;
+  transform: translateX(-20px);
+  transition: transform 0.4s;
+}
+
+/* Estilo para o wrapper do formulário de busca */
+.filter-card-busca {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 8px;
+  background-color: var(--gray);
+}
+
+/* Estilo para o formulário de busca */
+.filter-card-form {
+  padding-left: 47px;
+}
+
+/* Estilos para os elementos do formulário de busca */
+.filter-card-form select,
+.filter-card-form input[type="number"],
+.filter-card-form button {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Estilos para o link de busca e limpar filtro */
+.filter-card-form .search-link,
+.filter-card-form .reset-link {
+  display: inline-block;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+/* Estilo para o link de busca */
+.filter-card-form .search-link {
+  background-color: #007bff;
+  color: #fff;
+  margin-right: 10px;
+}
+
+/* Efeito hover para o link de busca */
+.filter-card-form .search-link:hover {
+  background-color: #0056b3;
+}
+
+/* Estilo para o link de limpar filtro */
+.filter-card-form .reset-link {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+/* Catálogo de Carros */
+
+/* Estilos para a seção do catálogo */
+section .catalog {
+  width: 100vw;
+  padding: 100px;
+}
+
+/* Estilos para o bloco do filtro */
+section .filter-card {
+  width: 980px;
+  height: 150px;
+  background: var(--gray);
+  border-radius: 8px;
+  margin: 0 auto;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Estilos para o botão de ação */
+.lw-btn {
+  width: 90%;
+  text-decoration: none;
+  padding: 5px 0px;
+  border: none;
+  font-weight: bold;
+  background-color: var(--blue);
+  color: var(--gray);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: 0.3s ease;
+}
+
+/* Efeito hover para o botão */
+.lw-btn:hover {
+  font-weight: bold;
+  
+}
+
+/* Estilos para o campo de entrada de busca */
+.search-input {
+  width: 700px;
+  height: 50px;
+  border: none;
+  border-radius: 4px 0px 0px 4px;
+  text-indent: 10px;
+  margin: 50px;
+}
+
+/* Estilos para o botão de busca */
+.search-button {
+  width: 150px;
+  height: 50px;
+  border-radius: 4px 4px 4px 4px;
+  text-decoration: none;
+  border: none;
+  background: var(--blue);
+  color: var(--gray);
+  cursor: pointer;
+  font-size: 1.1em;
+  transition: 0.2s ease;
+}
+
+/* Efeito hover para o botão de busca */
+.search-button:hover {
+  cursor: pointer;
+  
+}
+
+/* Estilos para o wrapper dos itens do catálogo */
+.title-wrapper-catalogo {
+  margin-top: 50px;
+  padding-bottom: 50px;
+  color: var(--blue); /* Define a cor do texto */
+}
+
+/* Estilos para o wrapper dos itens do catálogo */
+section .card-wrapper {
+  max-width: 1000px;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  grid-gap: 30px;
+  padding-top: 50px;
+}
+
+/* Estilos para os itens do catálogo */
+section .card-item {
+  height: 500px;
+  background: var(--gray);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* Estilos para o conteúdo do item do catálogo */
+.card-content {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center; 
+}
+
+/* Estilos para a imagem do item do catálogo */
+.card-item img {
+  width: 95%; 
+  height: 180px;
+  object-fit: cover; 
+  border-radius: 8px;
+}
+
+/* Estilos para o título do item do catálogo */
+.card-item h3 {
+  width: 90%;
+}
+
+/* Estilos para o parágrafo do item do catálogo */
+.card-item p {
+  font-weight: bold;
+  color: #00000070;
+}
+
+/* Estilos para o botão do item do catálogo */
+.card-item button {
+  width: 90%;
+  text-decoration: none;
+  padding: 5px 0px;
+  border: none;
+  background-color: var(--blue);
+  color: var(--gray);
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: 0.3s ease;
+}
+
+/* Efeito hover para o botão do item do catálogo */
+.card-item button:hover {
+  color: var(--preto);
+  transition: 0.2s;
+}
+
+/* Sobre Nós */
+
+/* Estilos para a seção Sobre Nós */
+.about {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 10px;
+  color: var(--blue); /* Define a cor do texto */
+}
+
+/* Estilos para o conteúdo da seção Sobre Nós */
+.about-content {
+  max-width: 1000px;
+  min-width: 300px;
+  height: 600px;
+  background: #dedede3b;
+  margin: 0 auto;
+  border-radius: 8px;
+  z-index: 10;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Estilos para o lado esquerdo do conteúdo Sobre Nós */
+.left {
+  width: 25%;
+  min-width: 300px;
+  height: 100%;
+  background: #000000a1;
+  border-radius: 8px;
+}
+
+/* Estilos para o lado direito do conteúdo Sobre Nós */
+.right {
+  width: 65%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-top: 10%;
+}
+
+/* Estilos para o título do lado direito do conteúdo Sobre Nós */
+.right h3 {
+  text-align: right;
+  width: 90%;
+  margin-bottom: 20px;
+}
+
+/* Estilos para o parágrafo do lado direito do conteúdo Sobre Nós */
+.right p {
+  max-width: 90%;
+  font-size: 1em;
+  letter-spacing: 2px;
+  text-align: right;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+/* Features */
+
+/* Estilos para a seção de Features */
+.features {
+  width: 100%;
+  height: 100%;
+  background: var(--gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blue); /* Define a cor do texto */
+  padding: 50px 0px;
+}
+
+/* Estilos para o wrapper do título de Features */
+.title-wrapper-features {
+  padding: 20px 0px;
+}
+
+/* Estilos para o bloco de cards de Features */
+.feature-card-block {
+  max-width: 1000px;
+  min-width: 300px;
+  height: 600px;
+  background: white;
+  margin: 0 auto;
+  border-radius: 8px;
+  z-index: 10;
+  padding: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+  grid-gap: 30px;
+}
+
+/* Estilos para os itens de cards de Features */
+.feature-card-item {
+  max-width: 420px;
+  height: 150px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  border: 1px solid #dedede3b;
+  border-radius: 4px;
+}
+
+/* Estilos para o conteúdo de texto dos itens de cards de Features */
+.feature-text-content {
+  max-width: 60%;
+  margin: 5px;
+}
+
+/* Estilos para as imagens dos itens de cards de Features */
+.feature-card-item img {
+  width: 64px;
+  height: 64px;
+}
+
+/* Footer */
+
+/* Estilos para o rodapé */
+footer {
+  width: 100%;
+  height: 250px;
+}
+
+/* Estilos para o bloco principal do rodapé */
+footer .main {
+  width: 100%;
+  height: 200px;
+  background: var(--orange);
+  padding: 20px 10px;
+}
+
+/* Estilos para os links do rodapé */
+.footer-links {
+  max-width: 1000px;
+  min-width: 300px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+/* Estilos para os elementos do rodapé */
+.footer-company,
+.footer-rental,
+.footer-contact,
+.footer-social {
+  color: white;
+  height: 100%;
+  min-height: 100px;
+}
+
+/* Estilos para os títulos dos links do rodapé */
+.footer-links h4 {
+  margin-bottom: 10px;
+}
+
+/* Estilos para os links do rodapé */
+.footer-links {
+  margin-bottom: 8px;
+}
+
+/* Estilos para as imagens dos links de redes sociais do rodapé */
+.main .footer-social img {
+  width: 32px;
+  height: 32px;
+}
+
+/* Estilos para o bloco de rodapé final */
+footer .last {
+  width: 100%;
+  height: 50px;
+  background: var(--blue);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Ajustes responsivos */
+
+/* Estilos para telas menores que 576px */
+@media (max-width: 576px) {
+  /* Esconde os itens da lista de navegação */
+  nav ul li {
+    display: none;
+  }
+
+  /* Ajustes para a imagem do cabeçalho */
+  .header-block img {
+    width: 70%;
+    position: absolute;
+    right: 16%;
+    top: 30%;
+  }
+
+  /* Ajustes para o texto do cabeçalho */
+  .header-block .text {
+    position: absolute;
+    bottom: 10%;
+    left: 15;
+  }
+
+  /* Ajustes para o bloco do filtro */
+  section .filter-card {
+    width: 390px;
+    padding: 0px 10px;
+  }
+
+  /* Ajustes para o campo de busca */
+  .search-input {
+    max-width: 700px;
+    min-width: 240px;
+  }
+
+  /* Ajustes para o botão de busca */
+  .search-button {
+    max-width: 150px;
+    min-width: 80px;
+  }
+
+  /* Ajustes para a seção Sobre Nós */
+  .about {
+    margin-top: 100px;
+  }
+
+  /* Ajustes para o conteúdo da seção Sobre Nós */
+  .title-wrapper-about {
+    margin-bottom: 20px;
+  }
+
+  /* Ajustes para o lado direito do conteúdo Sobre Nós */
+  .right {
+    width: 90%;
+  }
+
+  /* Ajustes para o parágrafo do lado direito do conteúdo Sobre Nós */
+  .right p {
+    width: 100%;
+    margin: 0px;
+    text-align: left;
+  }
+
+  /* Ajustes para a seção de Features */
+  .features {
+    height: 100%;
+  }
+
+  /* Ajustes para o bloco de cards de Features */
+  .feature-card-block {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Ajustes para o rodapé */
+  footer {
+    height: 100%;
+  }
+
+  /* Ajustes para o bloco principal do rodapé */
+  footer .main {
+    height: 100%;
+  }
+
+  /* Ajustes para os links do rodapé */
+  .footer-links {
+    flex-direction: column;
+    padding-left: 10%;
+  }
+}

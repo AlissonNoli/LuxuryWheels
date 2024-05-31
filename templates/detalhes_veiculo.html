@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/detalhes_veiculo.css"> 
+    <link rel="stylesheet" href="/static/banner.css"> 
+    <title>Detalhes do Veículo</title>
+</head>
+{% include 'banner.html' %}
+<body class="lw-container">
+    <div class="lw-content">
+        
+        <h1 class="title-wrapper-details">Detalhes do Veículo</h1>
+        
+        <div class="lw-details-wrapper">
+            <div class="lw-image-wrapper">
+                <img src="{{ veiculo.imagem }}" alt="Imagem do Veículo">
+            </div>
+
+            <div class="lw-text-wrapper">
+                <p>Marca: {{ veiculo.marca }}</p>
+                <p>Modelo: {{ veiculo.modelo }}</p>
+                <p>Categoria: {{ veiculo.categoria }}</p>
+                <p>Transmissão: {{ veiculo.transmissao }}</p>
+                <p>Tipo: {{ veiculo.tipo }}</p>
+                <p>Capacidade de Pessoas: {{ veiculo.capacidade_pessoas }}</p>
+                <p>Valor Diária: R$ {{ veiculo.valor_diaria }}</p>
+            </div>
+        </div>
+
+        <h2 class="title-wrapper-details">Reservar este Veículo</h2>
+        <form action="{{ url_for('processar_reserva', veiculo_id=veiculo.id) }}" method="post">
+            <label for="data_inicio">Data de Início:</label>
+            <input type="date" id="data_inicio" name="data_inicio" required><br>
+            <label for="data_fim">Data de Fim:</label>
+            <input type="date" id="data_fim" name="data_fim" required><br>
+            <label for="formas_pagamento">Forma de Pagamento:</label>
+            <select id="formas_pagamento" name="forma_pagamento" required>
+                {% for forma_pagamento in formas_pagamento %}
+                    <option value="{{ forma_pagamento.id }}">{{ forma_pagamento.tipo }}</option>
+                {% endfor %}
+            </select>
+                
+            </select><br>
+            <button type="submit" class="lw-btn-button">Reservar</button>
+        </form>
+    </div>
+{% include 'footer.html' %}
+</body>
+</html>

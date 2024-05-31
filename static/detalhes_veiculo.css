@@ -1,0 +1,113 @@
+/* Resetando as regras do CSS */
+.lw-reset {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Importando a fonte */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Definindo variáveis de cores */
+.lw-root {
+    --orange: #f78b00;
+    --gray: #ededed;
+    --preto: #000;
+}
+
+/* Estilos para o corpo da página */
+.lw-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lw-content {
+    width: 100%;
+}
+
+.lw-h1 {
+    text-align: center;
+    color: var(--preto);
+    margin-bottom: 20px;
+}
+
+.lw-details-wrapper {
+    display: flex;
+   
+}
+
+.title-wrapper-details {
+    padding: 20px 0px 20px;
+    color: var(--blue); /* Define a cor do texto */
+}
+
+.lw-image-wrapper {
+    flex: 0 0 50%; /* Ocupa metade da largura do container pai */
+    max-width: 50%; /* Limita a largura para metade */
+    margin-right: 20px;
+}
+
+.lw-image-wrapper img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.lw-text-wrapper {
+    flex: 0 0 50%; /* Ocupa metade da largura do container pai */
+    max-width: 50%; /* Limita a largura para metade */
+}
+
+.lw-text-wrapper p {
+    color: var(--preto);
+    margin-bottom: 10px;
+}
+
+.lw-h2 {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.lw-form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--preto);
+}
+
+input[type="date"],
+input[type="text"] {
+    width: 50%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid var(--preto);
+}
+
+.lw-btn-button {
+    background-color: var(--blue);
+    color: var(--gray);
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold   ;
+    width: 50%;
+    
+}
+
+.lw-btn-button:hover {
+    
+    transition: 0.3s ease;
+}

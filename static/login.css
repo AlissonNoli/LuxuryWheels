@@ -1,0 +1,76 @@
+/* font importing */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.lw-body {
+    font-family: "Montserrat";
+    background-color: #f2f2f2; /* Mudando a cor de fundo para um cinza mais claro */
+    color: #333; /* Mudando a cor do texto para preto */
+}
+
+.lw-container {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #fff; /* Mudando a cor de fundo do contêiner para branco */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.lw-input[type="text"],
+.lw-input[type="password"],
+.lw-input[type="email"] { /* Adicionando estilo para o campo de email */
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc; /* Adicionando uma borda cinza */
+    background-color: #f9f9f9; /* Mudando a cor de fundo para um cinza mais claro */
+    color: #333;
+    border-radius: 3px;
+}
+
+.lw-button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #f90;
+    color: #fff;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.lw-button[type="submit"]:hover {
+    background-color: #ffaa00;
+}
+
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+    display: none;
+}
+
+.popup.error {
+    border-color: #ff0000;
+}
+
+.popup.success {
+    border-color: #00ff00;
+}
+
+.popup.show {
+    display: block;
+}
+
+.popup-message {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservar Veículo</title>
+</head>
+<body>
+    <h1>Reservar Veículo</h1>
+    <h2>{{ veiculo.marca }} - {{ veiculo.modelo }}</h2>
+    <p>Categoria: {{ veiculo.categoria }}</p>
+    <p>Transmissão: {{ veiculo.transmissao }}</p>
+    <!-- Adicione outros detalhes do veículo conforme necessário -->
+
+    <form action="{{ url_for('processar_reserva', veiculo_id=veiculo.id) }}" method="post">
+        <label for="data_inicio">Data de Início:</label>
+        <input type="date" id="data_inicio" name="data_inicio" required><br>
+        <label for="data_fim">Data de Fim:</label>
+        <input type="date" id="data_fim" name="data_fim" required><br>
+        <label for="forma_pagamento">Forma de Pagamento:</label>
+        <select id="forma_pagamento" name="forma_pagamento">
+            {% for forma_pagamento in formas_pagamento %}
+                <option value="{{ forma_pagamento.id }}">{{ forma_pagamento.tipo }}</option>
+            {% endfor %}
+        </select><br>
+        <p>Quantidade de Dias Selecionados: {{ dias_reserva }}</p>
+        <p>Valor Total da Reserva: R$ {{ valor_total }}</p>
+        <button type="submit">Reservar</button>
+    </form>
+</body>
+</html>

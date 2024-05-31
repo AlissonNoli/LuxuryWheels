@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='veiculos.css') }}"> 
+    <title>Pesquisar Veículos</title>
+</head>
+<body>
+    <!-- Formulário de pesquisa de veículos -->
+    <form action="{{ url_for('pesquisar_veiculos') }}" method="post">
+        <label for="valor_diaria">Valor da Diária (até):</label>
+        <input type="number" id="valor_diaria" name="valor_diaria">
+
+        <label for="capacidade_pessoas">Capacidade de Pessoas:</label>
+        <select id="capacidade_pessoas" name="capacidade_pessoas">
+            <option value="">Selecione a capacidade</option>
+            <option value="1-4">1-4</option>
+            <option value="5-6">5-6</option>
+            <option value="7+">7+</option>
+        </select>
+
+        <label for="categoria">Categoria:</label>
+        <select id="categoria" name="categoria">
+            <option value="">Selecione uma categoria</option>
+            <option value="pequeno">Pequeno</option>
+            <option value="medio">Médio</option>
+            <option value="grande">Grande</option>
+            <option value="suv">SUV</option>
+            <option value="luxo">Luxo</option>
+        </select>
+
+        <label for="transmissao">Transmissão:</label>
+        <select id="transmissao" name="transmissao">
+            <option value="">Selecione uma transmissão</option>
+            <option value="automatico">Automático</option>
+            <option value="manual">Manual</option>
+        </select>
+
+        <label for="tipo">Tipo de Veículo:</label>
+        <select id="tipo" name="tipo">
+            <option value="">Selecione um tipo</option>
+            <option value="carro">Carro</option>
+            <option value="moto">Moto</option>
+        </select>
+
+        <button type="submit">Pesquisar</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Wheels - Empresa de Aluguel de Carros</title>
+    <link rel="stylesheet" href="/static/index.css">
+</head>
+
+<body>
+    <header>
+        <div class="content">
+            <nav>
+                <p class="brand" href="#">Luxury Wheels</p>
+                <ul>
+                    <li><a href="{{ url_for('index') }}">Início</a></li>
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#features">Recursos</a></li>
+                    <li><a href="{{ url_for('veiculos') }}">Carros</a></li>
+                    <li><a href="#main">Contatos</a></li>
+                    {% if current_user.is_authenticated %}
+                    <li><a href="{{ url_for('perfil_cliente') }}">Perfil</a></li>
+                    <li><a href="{{ url_for('logout') }}">Logout</a></li>
+                    {% else %}
+                    <li><a href="{{ url_for('login') }}" class="login">Login | Cadastre-se</a></li>
+                    {% endif %}
+                </ul>
+            </nav>
+            <div class="header-block">
+                <div class="text">
+                    <h2>Aproveite a vida com nossos carros confortáveis.</h2>
+                    <p>A Luxury Wheels está pronta para proporcionar a melhor experiência em aluguel de carros.</p>
+                    {% if current_user.is_authenticated %}
+                    <p>Bem-vindo, {{ current_user.username }}!</p>
+                    {% endif %}
+                </div>
+                <img src="/static/imagens/d1705d6cfc8af853d16b9cbd9438c866.jpg" alt="Mercedes">
+            </div>
+        </div>
+    </header>
+    <!-- Seção de catálogo -->
+    <section class="catalog" id="catalog">
+        <div class="content">
+            <div class="title-wrapper-catalogo">
+                <p>Ache o que você deseja</p>
+                <h3>Carros</h3>
+            </div>
+            <!-- Aqui você pode adicionar um formulário de busca se desejar -->
+            <div class="card-wrapper">
+                {% for veiculo in veiculos %}
+                <div class="card-item">
+                    <img src="{{ veiculo.imagem }}" alt="Imagem do Veículo">
+                    <div class="card-content">
+                        <h3>{{ veiculo.marca }} - {{ veiculo.modelo }}</h3>
+                        <p class="card-text">Categoria: {{ veiculo.categoria }}</p>
+                        <p class="card-text">Transmissão: {{ veiculo.transmissao }}</p>
+                        <p class="card-text">Capacidade de Pessoas: {{ veiculo.capacidade_pessoas }}</p>
+                        <p class="card-text">Valor Diária: R$ {{ veiculo.valor_diaria }}</p>
+                        <a href="{{ url_for('detalhes_veiculo', veiculo_id=veiculo.id) }}" class="lw-btn">Eu quero esse</a>
+
+                        
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    <section class="about" id="about">
+        <div class="content">
+            <div class="title-wrapper-about">
+                <p>Saiba sobre nós</p>
+                <h3>Sobre nós</h3>
+            </div>
+            <div class="about-content">
+                <div class="left">
+                    <img src="/static/imagens/about.png" alt="Sobre Nós">
+                </div>
+                <div class="right">
+                    <h3>Experimente tecnologia e mobilidade</h3>
+                    <p>A Luxury Wheels está na vanguarda da revolução tecnológica da mobilidade. Nossa abordagem inovadora combina luxo e tecnologia para proporcionar experiências de viagem excepcionais. Com uma frota de veículos equipados com as últimas tecnologias de segurança e conectividade, estamos redefinindo os padrões de conforto e conveniência. Desde carros elétricos de última geração até sistemas avançados de assistência ao motorista, nossa missão é oferecer uma mobilidade inteligente e sustentável. Na Luxury Wheels, cada viagem é uma fusão perfeita de elegância e inovação, elevando o conceito de luxo a novos patamares na era da mobilidade moderna.</p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features" id="features">
+        <div class="content">
+            <div class="title-wrapper-features">
+                <p>O que você pode fazer</p>
+                <h3>Recursos</h3>
+            </div>
+            <div class="feature-card-block">
+                <div class="feature-card-item">
+                    <img src="/static/imagens/feature-planet.png" alt="Feature" />
+                    <div class="feature-text-content">
+                        <h3>Descubra o Poder do Luxo nas Suas Viagens</h3>
+                        <p>Viaje com estilo e conforto incomparáveis ao alugar conosco!</p>
+                    </div>
+                </div>
+                <div class="feature-card-item">
+                    <img src="/static/imagens/feature-planet.png" alt="Feature" />
+                    <div class="feature-text-content">
+                        <h3>Transforme Seus Sonhos em Realidade</h3>
+                        <p>Desfrute de aventuras luxuosas com nossos carros exclusivos.</p>
+                    </div>
+                </div>
+                <div class="feature-card-item">
+                    <img src="/static/imagens/feature-planet.png" alt="Feature" />
+                    <div class="feature-text-content">
+                        <h3>Faça da Sua Viagem uma Experiência Memorável</h3>
+                        <p>Torne cada jornada inesquecível com nossos veículos de prestígio.</p>
+                    </div>
+                </div>
+                <div class="feature-card-item">
+                    <img src="/static/imagens/feature-planet.png" alt="Feature" />
+                    <div class="feature-text-content">
+                        <h3>Elevando o Conceito de Viagens de Luxo</h3>
+                        <p>Descubra o próximo nível de elegância e sofisticação ao dirigir conosco.</p>
+                    </div>
+                </div>
+                <div class="feature-card-item">
+                    <img src="/static/imagens/feature-planet.png" alt="Feature" />
+                    <div class="feature-text-content">
+                        <h3>Desperte a Paixão por Explorar Novos Destinos</h3>
+                        <p>Abra portas para destinos incríveis com nossos carros de alta categoria.</p>
+                    </div>
+                </div>
+                <div class="feature-card-item">
+                    <img src="/static/imagens/feature-planet.png" alt="Feature" />
+                    <div class="feature-text-content">
+                        <h3>Transforme Cada Jornada em uma Aventura Luxuosa</h3>
+                        <p>Liberte-se das limitações com nossas opções de aluguel de elite.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="main" id="main">
+            <div class="content footer-links">
+                <div class="footer-company">
+                    <h4>Empresa</h4>
+                    <h6>Sobre</h6>
+                    <h6>Contato</h6>
+                </div>
+                <div class="footer-rental">
+                    <h4>Aluguel</h4>
+                    <h6>Self-Drive</h6>
+                    <h6>Motorista</h6>
+                    <h6>Ajuda</h6>
+                </div>
+                <div class="footer-social">
+                    <h4>Mantenha-se conectado</h4>
+                    <div class="social-icons">
+                        <img src="/static/imagens/instagram.png" alt="Instagram" />
+                        <img src="/static/imagens/facebook.png" alt="Facebook" />
+                    </div>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contate-nos</h4>
+                    <h6>+351 934 934 934</h6>
+                    <h6>contato@luxuryWheels.com</h6>
+                    <h6>Nome da Rua, Lisboa, Cascais - 2750-000</h6>
+                </div>
+            </div>
+        </div>
+        <div class="last">&copy; 2024 Luxury Wheels. Todos os direitos reservados.</div>
+    </footer>
+</body>
+
+</html>

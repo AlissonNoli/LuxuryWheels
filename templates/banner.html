@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>luxuryWheels - Aluguel de Carros de Luxo</title>
+    <link rel="stylesheet" href="banner.css"> 
+</head>
+<body class="lw-body">
+    <header class="lw-header">
+        <div class="content lw-content">
+            <nav class="lw-nav">
+                <p class="brand lw-brand" href="#">Luxury Wheels</p> 
+                <ul>
+                    <li><a href="{{ url_for('index') }}">Início</a></li>
+                    <li><a href="{{ url_for('index') }}#about">Sobre</a></li>
+                    <li><a href="{{ url_for('index') }}#features">Recursos</a></li>
+                    <li><a href="{{ url_for('veiculos') }}#reserva">Carros</a></li>
+                    <li><a href="{{ url_for('index') }}#main">Contatos</a></li>
+                    {% if current_user.is_authenticated %}
+                    <li><a href="{{ url_for('perfil_cliente') }}">Perfil</a></li>
+                    <li><a href="{{ url_for('logout') }}">Logout</a></li>
+                    {% else %}
+                    <li><a href="{{ url_for('login') }}" class="login">Login | Cadastre-se</a></li>
+                    {% endif %}
+                </ul>
+            </nav>
+            <div class="header-block lw-header-block">
+                <div class="text">
+                    <h2>Aproveite a vida com nossos carros confortáveis.</h2>
+                    <p>A Luxury Wheels está pronta para proporcionar a melhor experiência em aluguel de carros.</p>
+                </div>
+                <img src="/static/imagens/d1705d6cfc8af853d16b9cbd9438c866.jpg" alt="Mercedes"> 
+            </div>
+        </div>
+    </header>
+</body>
+</html>

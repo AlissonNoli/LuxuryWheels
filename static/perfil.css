@@ -1,0 +1,165 @@
+/* font importing */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* reseting css rules */
+/* Define as regras de reset para garantir consistência */
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  outline: none;
+  font-family: "Montserrat"; /* Define a fonte padrão */
+}
+
+/* Define as variáveis de cores */
+:root {
+  --orange: #f78b00;
+  --blue: #00285f;
+  --gray: #ededed;
+  --preto: #000;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%; /* Adiciona altura de 100% para o body */
+  overflow-x: hidden;
+}
+
+.content {
+  max-width: 1000px; /* Define a largura máxima do conteúdo */
+  min-width: 300px; /* Define a largura mínima do conteúdo */
+  margin: 0 auto; /* Centraliza o conteúdo na página */
+  display: flex;
+  flex-direction: column;
+  padding: 10px; /* Adiciona um espaçamento interno */
+}
+
+/* Estilos para o título do perfil do cliente */
+.title-wrapper-perfil-cliente h1 {
+  color: var(--blue); /* Define a cor do texto */
+  font-size: 24px; /* Define o tamanho da fonte */
+  margin-bottom: 20px; /* Adiciona espaçamento inferior */
+}
+
+/* Estilos para os formulários */
+form {
+  margin-bottom: 30px; /* Adiciona espaçamento inferior */
+}
+
+form label {
+  margin-bottom: 10px; /* Adiciona espaçamento inferior */
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"] {
+  width: 100%; /* Define a largura total do campo de entrada */
+  padding: 10px; /* Adiciona espaçamento interno */
+  margin-bottom: 20px; /* Adiciona espaçamento inferior */
+  border: 1px solid #ccc; /* Adiciona uma borda */
+  border-radius: 5px; /* Adiciona bordas arredondadas */
+}
+
+form button[type="submit"] {
+  background-color: var(--blue); /* Define a cor de fundo do botão */
+  color: var(--gray); /* Define a cor do texto do botão */
+  padding: 10px 20px; /* Adiciona espaçamento interno */
+  border: none; /* Remove a borda */
+  border-radius: 5px; /* Adiciona bordas arredondadas */
+  font-weight: bold; /* Define a espessura da fonte */
+  cursor: pointer; /* Muda o cursor ao passar por cima */
+}
+
+/* Estilos para os títulos das informações do cliente */
+.title-wrapper-info-cliente h2 {
+  color: var(--blue); /* Define a cor do texto */
+  font-size: 20px; /* Define o tamanho da fonte */
+  margin-bottom: 20px; /* Adiciona espaçamento inferior */
+}
+
+/* Estilos para as informações do cliente */
+.title-wrapper-info-cliente p {
+  margin-bottom: 10px; /* Adiciona espaçamento inferior */
+}
+
+
+/* Estilos para os detalhes das reservas */
+.title-wrapper-detalhes-reservas {
+  display: flex;
+}
+
+
+.title-wrapper-texto-reservas {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.title-wrapper-texto-reservas p {
+  margin-bottom: 10px;
+}
+
+
+/* Estilos para os títulos das reservas */
+.title-wrapper-reservas h2 {
+  color: var(--blue); /* Define a cor do texto */
+  font-size: 20px; /* Define o tamanho da fonte */
+  margin-bottom: 20px; /* Adiciona espaçamento inferior */
+}
+
+/* Estilos para os detalhes das reservas */
+.title-wrapper-detalhes {
+  color: var(--blue); /* Define a cor do texto */
+  margin-bottom: 10px; /* Adiciona espaçamento inferior */
+}
+
+.title-wrapper-detalhes-reservas img {
+  max-width: 50%; /* Garante que a imagem não ultrapasse o container */
+  height: auto; /* Permite que a altura seja ajustada automaticamente */
+  margin-bottom: 10px; /* Adiciona espaçamento inferior */
+  margin-right: 20px;
+  border-radius: 6px;
+}
+
+/* Estilos para os detalhes da reserva */
+.title-wrapper-infos-reserva h3 {
+  color: var(--blue); /* Define a cor do texto */
+  font-size: 18px; /* Define o tamanho da fonte */
+  margin-bottom: 10px; /* Adiciona espaçamento inferior */
+  margin-top: 50px; /* Adiciona espaçamento superior */
+}
+
+/* Estilos para as opções de alteração */
+.title-wrapper-altaraçoes {
+  margin-top: 20px; /* Adiciona espaçamento superior */
+  margin-bottom: 10px; /* Adiciona espaçamento inferior */
+}
+
+.title-wrapper-altaraçoes label {
+  margin-right: 10px; /* Adiciona espaçamento à direita */
+}
+
+.title-wrapper-altaraçoes input[type="date"] {
+  width: auto; /* Define a largura automática */
+  padding: 7px;
+  border-radius: 6px;
+  margin-right: 10px; /* Adiciona espaçamento à direita */
+}
+
+.title-wrapper-altaraçoes button {
+  background-color: #dc3545; /* Define a cor de fundo do botão */
+  color: var(--gray); /* Define a cor do texto do botão */
+  padding: 5px 10px; /* Adiciona espaçamento interno */
+  border: none; /* Remove a borda */
+  border-radius: 5px; /* Adiciona bordas arredondadas */
+  cursor: pointer; /* Muda o cursor ao passar por cima */
+  font-weight: bold; /* Define a espessura da fonte */
+  font-size: 0.9em; /* Define o tamanho da fonte */
+}
+
+.title-wrapper-altaraçoes button[type="submit"] {
+  background-color: var(--blue); /* Define a cor de fundo do botão */
+  font-weight: bold; /* Define a espessura da fonte */
+}
+
+  

@@ -1,0 +1,59 @@
+/* Estilos para o contêiner principal */
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+/* Estilos para os títulos */
+h1, h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilos para os campos de entrada */
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+/* Estilos para os botões */
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para mensagens de erro/sucesso */
+.message {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+.error {
+    background-color: #f44336;
+    color: #fff;
+}
+
+.success {
+    background-color: #4caf50;
+    color: #fff;
+}
