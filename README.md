@@ -1,21 +1,35 @@
-Sistema de Gerenciamento de Reservas de Veículos
+Site para Aluguel de Carros
 
-Este é um projeto de um sistema web desenvolvido em Flask, um framework web em Python, para gerenciar reservas de veículos em uma locadora. O sistema permite que os usuários façam reservas de veículos disponíveis, visualizem detalhes dos veículos, editem seus perfis e cancelem reservas existentes.
+Este projeto é um sistema web de aluguel de carros desenvolvido com Flask, que permite aos usuários visualizar, reservar e gerenciar veículos disponíveis. O sistema possui funcionalidades de autenticação de usuários, gerenciamento de reservas e exibição de veículos com informações detalhadas.
 
-Funcionalidades Principais
-Registro de Usuário: Os usuários podem se registrar no sistema fornecendo um nome de usuário exclusivo, um endereço de e-mail válido, uma senha e um número de telefone.
-Login e Logout: Os usuários podem fazer login e logout de suas contas para acessar as funcionalidades do sistema.
-Reservas de Veículos: Os usuários podem fazer reservas de veículos disponíveis escolhendo as datas de início e fim da reserva, bem como a forma de pagamento desejada.
-Visualização de Detalhes do Veículo: Os usuários podem visualizar detalhes dos veículos disponíveis, incluindo marca, modelo, categoria, transmissão, capacidade de passageiros e valor da diária.
-Edição de Perfil: Os usuários podem editar informações de seus perfis, como nome de usuário, endereço de e-mail e número de telefone.
-Cancelamento de Reservas: Os usuários podem cancelar reservas existentes, liberando o veículo reservado para outros usuários.
+Funcionalidades Principais:
 
+Cadastro e Login de Usuários:
+Os usuários podem se registrar com um nome de usuário, email e senha, além de fornecer um número de telefone.
+Implementação de autenticação segura, incluindo a criptografia de senhas.
 
-Próximos Passos
+Exibição de Veículos:
+Os veículos disponíveis são mostrados na página inicial, com três veículos selecionados aleatoriamente.
+Os usuários podem filtrar a busca por modelo, marca, categoria, tipo de transmissão, tipo de veículo e capacidade de passageiros.
 
-Algumas melhorias e recursos futuros que podem ser adicionados ao projeto incluem:
+Gerenciamento de Reservas:
+Os usuários podem selecionar um veículo e realizar uma reserva, especificando a data de início e a data de fim da locação.
+O sistema valida as datas inseridas e calcula automaticamente o valor total da reserva com base no preço diário do veículo.
 
-Implementação de testes automatizados para garantir a estabilidade e confiabilidade do sistema.
-Adição de funcionalidades de administração para gerenciamento de veículos, usuários e reservas.
-Melhorias na interface do usuário para uma experiência mais intuitiva e agradável.
-Implementação de notificações por e-mail para confirmações de reserva, lembretes e outras comunicações com os usuários.
+Confirmação e Cancelamento de Reservas:
+Após a realização da reserva, uma página de confirmação exibe detalhes da locação, como datas e custo total.
+Os usuários podem cancelar reservas existentes, que irão liberar o veículo para novas locações.
+
+Painel do Usuário:
+Os usuários têm acesso a um painel onde podem visualizar e gerenciar suas reservas, além de atualizar suas informações de perfil, como nome de usuário, email e telefone.
+
+Administração de Veículos:
+O sistema permite adicionar novos veículos ao banco de dados com informações detalhadas, como marca, modelo, categoria, tipo de transmissão, capacidade de passageiros e valor diário.
+
+Tecnologias Usadas:
+Python: Linguagem de programação principal para o desenvolvimento do backend.
+Flask: Framework web utilizado para construir a aplicação.
+SQLAlchemy: ORM (Object Relational Mapper) para gerenciamento de banco de dados.
+SQLite: Banco de dados utilizado para armazenar informações de usuários, veículos e reservas.
+Flask-Login: Gerenciamento de sessões de usuário para autenticação.
+HTML/CSS: Para construção das interfaces de usuário.
